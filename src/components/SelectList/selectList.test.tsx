@@ -22,6 +22,6 @@ describe('Component: selectList', () => {
     const selectedCity = screen.getByText(/camp/i)
     fireEvent.press(selectedCity)
 
-    expect(onPress).toHaveBeenCalledTimes(1)
+    expect(onPress).toHaveBeenCalledWith(data[0])
   })
 })

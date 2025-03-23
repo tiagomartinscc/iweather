@@ -6,7 +6,7 @@
   "build": {
     "preview": {
       "android": {
-        "buildType": "apk"
+        "distribution": "internal"
       },
       "env": {
         "EXPO_PUBLIC_WEATHER_APP_ID": "d8314c1931d791ad00a1a9d0d6ff70c1"

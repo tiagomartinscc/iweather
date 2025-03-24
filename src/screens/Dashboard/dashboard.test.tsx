@@ -22,7 +22,8 @@ describe("Screen: Dashboard", () => {
     jest.spyOn(api, 'get').mockResolvedValue({ data: mockWeatherAPIResponse });    
     render(<Dashboard />)
 
-    await waitFor(() => expect(screen.findByText(/rio do sul/i, {}, {timeout: 3000})).toBeTruthy());
+    const cityName = await waitFor(() => screen.findByText(/rio do sul/i));
+    expect(cityName).toBeTruthy() 
   })
 
   it('should be show another selected weather city', async () =>{

@@ -17,21 +17,21 @@ describe("Routes", () => {
   })
 
   it('should be render Dashboard screen when has city selected', async () => {
-    // jest.spyOn(api, 'get').mockResolvedValue({ data: mockWeatherAPIResponse })
+    jest.spyOn(api, 'get').mockResolvedValue({ data: mockWeatherAPIResponse })
 
-    // const city = {
-    //   id: '1',
-    //   name: 'São Paulo',
-    //   latitude: 123,
-    //   longitude: 456
-    // }
+    const city = {
+      id: '1',
+      name: 'São Paulo',
+      latitude: 123,
+      longitude: 456
+    }
     
-    // await saveStorageCity(city)
+    await saveStorageCity(city)
 
-    // await act(() => waitFor(() => render(<Routes />)))
+    await waitFor(() => render(<Routes />))
 
-    // const title = screen.getByText(city.name)
+    const title = screen.getByText(city.name)
 
-    // expect(title).toBeTruthy()
+    expect(title).toBeTruthy()
   })
 })

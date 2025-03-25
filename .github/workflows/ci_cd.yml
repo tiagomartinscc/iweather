@@ -19,6 +19,12 @@ jobs:
         with:
           node-version: 23.x
 
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # Pode ser 'zulu', 'adopt', entre outros.
+          java-version: '17'
+
       - name: Install dependencies
         run: npm install
 
